@@ -17,11 +17,9 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#endpoints">Endpoints</a></li>
+    <li><a href="#endpoints">API Description</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -88,42 +86,31 @@ To get a local copy up and running follow these simple example steps.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- ENDPOINTS -->
-## Endpoints
+## API Description
 
-### Admin Endpoints
+### Admin API
 
-| Method | Endpoint                          | Description                |
-|--------|-----------------------------------|----------------------------|
-| DELETE | `/admin/delete-user/{username}`   | Delete a user by username  |
-| POST   | `/admin/add-admin/{userId}`       | Add admin role to a user   |
-| GET    | `/admin/check`                    | Check API status           |
+| Method | Endpoint                          | Description                | Request Body                                                   |
+|--------|-----------------------------------|----------------------------|----------------------------------------------------------------|
+| DELETE | `/admin/delete-user/{username}`   | Delete a user by username  | None                                                           |
+| POST   | `/admin/add-admin/{userId}`       | Add admin role to a user   | None                                                           |
+| GET    | `/admin/check`                    | Check API status           | None                                                           |
 
-### User Endpoints
+### User API
 
-| Method | Endpoint                          | Description                |
-|--------|-----------------------------------|----------------------------|
-| POST   | `/user/register`                  | Register a new user        |
-| POST   | `/user/register-admin`            | Register a new admin       |
-| POST   | `/user/signin`                    | Authenticate a user        |
+| Method | Endpoint                          | Description                | Request Body                                                   |
+|--------|-----------------------------------|----------------------------|----------------------------------------------------------------|
+| POST   | `/user/register`                  | Register a new user        | `{"name": "username", "password": "password"}` (JSON)          |
+| POST   | `/user/register-admin`            | Register a new admin       | `{"name": "username", "password": "password"}` (JSON)          |
+| POST   | `/user/signin`                    | Authenticate a user        | `{"name": "username", "password": "password"}` (JSON)          |
 
-### Solar Watch Endpoints
+### Solar Watch API
 
-| Method | Endpoint                          | Description                |
-|--------|-----------------------------------|----------------------------|
-| GET    | `/solarwatch/{city}/{date}`       | Get solar events for a city|
+| Method | Endpoint                          | Description                | Request Body                                                   |
+|--------|-----------------------------------|----------------------------|----------------------------------------------------------------|
+| GET    | `/solarwatch/{city}/{date}`       | Get solar events for a city| None                                                           |
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
